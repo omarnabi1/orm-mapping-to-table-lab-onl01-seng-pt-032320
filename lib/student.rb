@@ -38,6 +38,6 @@ class Student
         SQL
         DB[:conn].execute(sql)
       
-        @id = DB[:conn].execute("SELECT last_insert_rowid() FROM songs")[0][0]
+        @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
   end
 end
