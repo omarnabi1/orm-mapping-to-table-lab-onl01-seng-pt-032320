@@ -18,24 +18,25 @@ class Student
               name TEXT,
               grade INTEGER
               );
-              SQL
+        SQL
 
-              DB[:conn].execute(sql)
+        DB[:conn].execute(sql)
   end
 
   def self.drop_table
     sql = <<-SQL
             DROP TABLE IF EXISTS students;
-            SQL
+        SQL
 
-          DB[:conn].execute(sql)
+        DB[:conn].execute(sql)
   end
   
   def save
     sql = <<-SQL
             INSERT INTO students (name, grade)
             VALUES (?, ?)
-            SQL
-            DB[:conn].execute(sql)
-            
+        SQL
+        DB[:conn].execute(sql)
+      
+        @id
 end
